@@ -2,6 +2,13 @@ source "https://rubygems.org"
 
 ruby "3.0.5"
 
+# Materialize CSS
+gem 'materialize-sass'
+gem "sassc-rails"
+
+# Env variables
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.0"
 
