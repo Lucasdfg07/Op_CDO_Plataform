@@ -18,6 +18,13 @@ module.exports = {
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
     },
+    screens: {
+      'xs': '400px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    }
   },
   plugins: [
     plugin(function ({ matchUtilities, theme }) {

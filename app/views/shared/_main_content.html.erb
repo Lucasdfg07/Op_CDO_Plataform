@@ -1,7 +1,5 @@
 <%= render partial: 'shared/navbar' if user_signed_in? %>
 
-<div class='m-6'>
-  <%= yield %>
-</div>
+<%= yield %>
 
 <%= render partial: 'shared/alerts' %>

@@ -5,6 +5,7 @@ RSpec.describe LessonClass, type: :model do
     LessonClass.create(
       title: 'test',
       description: 'test',
+      complementary: false,
     )
   end
 

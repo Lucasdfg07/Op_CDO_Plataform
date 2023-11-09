@@ -26,20 +26,20 @@ pt:
     six:
       title: 'Conceitos Importantes'
       description: 'Tópicos importantes'
-  extras:
-    title: 'Módulos Complementares'
-    one:
-      title: 'Se tornando PRO'
-      description: 'Aulas de Inglês para Entrevistas'
-    two:
-      title: 'Vendo o campo de batalha acontecer'
-      description: 'Entrevistas na Prática'
-    three:
-      title: 'Botando a mão na massa'
-      description: 'Oficinas'
-    four:
-      title: 'Conhecendo a mente por trás das vagas'
-      description: 'Q&A com Recrutadores internacionais'
-    five:
-      title: 'Conhecendo TUDO sobre a vaga gringa'
-      description: 'Bônus Gerais'
+    extras:
+      title: 'Módulos Complementares'
+      one:
+        title: 'Se tornando PRO'
+        description: 'Aulas de Inglês para Entrevistas'
+      two:
+        title: 'Vendo o campo de batalha acontecer'
+        description: 'Entrevistas na Prática'
+      three:
+        title: 'Botando a mão na massa'
+        description: 'Oficinas'
+      four:
+        title: 'Conhecendo a mente por trás das vagas'
+        description: 'Q&A com Recrutadores internacionais'
+      five:
+        title: 'Conhecendo TUDO sobre a vaga gringa'
+        description: 'Bônus Gerais'
