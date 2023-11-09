@@ -1,11 +1,11 @@
-<nav class='shadow-lg shadow-white/30 text-white pt-3'>
+<nav class='shadow-lg shadow-white/30 pt-3'>
   <div class='flex items-center flex-row'>
     <div class='basis-11/12'>
       <%= image_tag 'logo-op-cdo', alt: 'Logo', class: 'object-contain w-32' %>
     </div>
 
     <div class='m-auto'>
-      <%= link_to :quit, destroy_user_session_path, class: 'text-lg' %>
+      <%= link_to t("user.session.quit"), destroy_user_session_path, class: 'text-lg' %>
     </div>
   </div>
 </nav>
