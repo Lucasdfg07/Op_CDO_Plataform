@@ -1,5 +1,6 @@
-<div class='h-96 bg-main-image bg-cover shadow-sm shadow-white transition-shadow hover:shadow-lg hover:shadow-white'>
+<div class='h-96 bg-cover shadow-sm shadow-white transition-shadow hover:shadow-lg hover:shadow-white' style="background-image: url('<%= rails_blob_path(lesson_class.background, disposition: 'attachment') %>');">
   <div class='text-center text-shadow pt-32'>
+
     <div class='text-xl'>
       <%= lesson_class.title %>
     </div>

@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+
+  namespace :admin do
+    resources :home, only: [:index]
+    resources :lesson_classes, only: [:index, :new, :create]
+  end
 end

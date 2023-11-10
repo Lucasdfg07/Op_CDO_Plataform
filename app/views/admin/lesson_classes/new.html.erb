@@ -1,0 +1,27 @@
+<div class='pt-40 text-center'>
+  <%= form_with(model: @lesson_class, url: admin_lesson_classes_path) do |form| %>
+    <div class='mt-4'>
+      <%= t('platform.lesson_class.fields.title') %> <br />
+      <%= form.text_field :title %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson_class.fields.description') %> <br />
+      <%= form.text_field :description %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson_class.fields.complementary') %> <br />
+      <%= form.check_box :complementary %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson_class.fields.background') %> <br />
+      <%= form.file_field :background %>
+    </div>
+
+    <div class='mt-4'>
+      <%= form.submit t('platform.lesson_class.fields.save') %>
+    </div>
+  <% end %>
+</div>

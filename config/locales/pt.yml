@@ -6,40 +6,18 @@ pt:
     home:
       subtitle: 'Plataforma Operação Código de Ouro'
       title: 'LEVANDO SUA CARREIRA ATÉ O MERCADO INTERNACIONAL'
+    lesson_class:
+      fields:
+        title: 'Título'
+        description: 'Descrição'
+        complementary: 'Marque caso seja um Módulo Complementar'
+        background: 'Imagem de Fundo'
+        save: 'Salvar Módulo'
+      new:
+        label: 'Novo Módulo'
+        success: 'Módulo criado com sucesso!'
+        error: 'Erro ao criar módulo! Tente novamente mais tarde!'
   modules:
     title: 'Módulos'
-    one:
-      title: 'Apresentação'
-      description: 'Olá, eu sou Lucas Siqueira'
-    two:
-      title: 'Primeiro Passo'
-      description: 'Comecando a jornada'
-    three:
-      title: 'Caindo no radar dos RHs'
-      description: 'Projetando sua carreira'
-    four:
-      title: 'Atraindo 10x mais propostas'
-      description: 'Fazendo a expansão'
-    five:
-      title: 'Indo para o campo de batalha'
-      description: 'Passando na Entrevista'
-    six:
-      title: 'Conceitos Importantes'
-      description: 'Tópicos importantes'
     extras:
       title: 'Módulos Complementares'
-      one:
-        title: 'Se tornando PRO'
-        description: 'Aulas de Inglês para Entrevistas'
-      two:
-        title: 'Vendo o campo de batalha acontecer'
-        description: 'Entrevistas na Prática'
-      three:
-        title: 'Botando a mão na massa'
-        description: 'Oficinas'
-      four:
-        title: 'Conhecendo a mente por trás das vagas'
-        description: 'Q&A com Recrutadores internacionais'
-      five:
-        title: 'Conhecendo TUDO sobre a vaga gringa'
-        description: 'Bônus Gerais'
