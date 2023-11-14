@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :home, only: [:index]
-    resources :lesson_classes, only: [:index, :new, :create]
+    resources :lesson_classes, only: [:new, :create]
+    resources :lessons, only: [:new, :create]
   end
+
+  resources :lesson_classes, only: [:show]
 end

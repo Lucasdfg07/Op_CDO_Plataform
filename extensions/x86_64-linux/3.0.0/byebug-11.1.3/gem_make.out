@@ -1,0 +1,19 @@
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/byebug-11.1.3/ext/byebug
+/home/lucas/.rbenv/versions/3.0.5/bin/ruby -I /home/lucas/.rbenv/versions/3.0.5/lib/ruby/3.0.0 -r ./siteconf20231113-17182-3fvsg1.rb extconf.rb
+creating Makefile
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= clean
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\=
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20231113-17182-1impx/byebug

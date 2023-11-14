@@ -1,0 +1,22 @@
+<div class='pt-40 text-center'>
+  <%= form_with(model: @lesson, url: admin_lessons_path) do |form| %>
+    <div class='mt-4'>
+      <%= t('platform.lesson.fields.lesson_classes') %> <br />
+      <%= form.collection_select :lesson_class_id, LessonClass.all, :id, :title %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson.fields.title') %> <br />
+      <%= form.text_field :title %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson.fields.video') %> <br />
+      <%= form.text_field :video_url %>
+    </div>
+
+    <div class='mt-4'>
+      <%= form.submit t('platform.lesson.fields.save') %>
+    </div>
+  <% end %>
+</div>

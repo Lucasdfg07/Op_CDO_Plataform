@@ -1,4 +1,3 @@
-require 'byebug'
 class Admin::LessonClassesController < ApplicationController
   def new
     @lesson_class = LessonClass.new

@@ -17,6 +17,16 @@ pt:
         label: 'Novo Módulo'
         success: 'Módulo criado com sucesso!'
         error: 'Erro ao criar módulo! Tente novamente mais tarde!'
+    lesson:
+      fields:
+        lesson_classes: 'Módulo que a aula pertence'
+        title: 'Título'
+        video: 'Link da Aula'
+        save: 'Salvar Aula'
+      new:
+        label: 'Nova Aula'
+        success: 'Aula criada com sucesso!'
+        error: 'Erro ao criar Aula! Tente novamente mais tarde!'
   modules:
     title: 'Módulos'
     extras:

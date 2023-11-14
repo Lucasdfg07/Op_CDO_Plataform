@@ -1,0 +1,20 @@
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/io-console-0.6.0/ext/io/console
+/home/lucas/.rbenv/versions/3.0.5/bin/ruby -I /home/lucas/.rbenv/versions/3.0.5/lib/ruby/3.0.0 -r ./siteconf20231113-17182-t7conf.rb extconf.rb
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... no
+checking for rb_scheduler_timeout()... no
+creating Makefile
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= clean
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\=
+compiling console.c
+linking shared-object io/console.so
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 console.so ./.gem.20231113-17182-uarm84/io

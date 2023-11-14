@@ -1,0 +1,16 @@
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/debug-1.8.0/ext/debug
+/home/lucas/.rbenv/versions/3.0.5/bin/ruby -I /home/lucas/.rbenv/versions/3.0.5/lib/ruby/3.0.0 -r ./siteconf20231113-17182-mzepal.rb extconf.rb
+creating Makefile
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/debug-1.8.0/ext/debug
+make DESTDIR\= clean
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/debug-1.8.0/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/gems/debug-1.8.0/ext/debug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20231113-17182-eprynw/debug

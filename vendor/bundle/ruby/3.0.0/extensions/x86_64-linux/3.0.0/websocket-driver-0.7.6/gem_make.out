@@ -1,0 +1,15 @@
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+/home/lucas/.rbenv/versions/3.0.5/bin/ruby -I /home/lucas/.rbenv/versions/3.0.5/lib/ruby/3.0.0 -r ./siteconf20231113-22229-n8k98l.rb extconf.rb
+creating Makefile
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/lucas/Projetos/op_codigo_de_ouro_platform/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20231113-22229-bh8s71
