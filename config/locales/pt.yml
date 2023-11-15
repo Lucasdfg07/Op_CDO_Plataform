@@ -2,6 +2,7 @@ pt:
   user:
     session:
       quit: 'Sair'
+      back: 'Voltar'
   platform:
     home:
       subtitle: 'Plataforma Operação Código de Ouro'
@@ -21,12 +22,20 @@ pt:
       fields:
         lesson_classes: 'Módulo que a aula pertence'
         title: 'Título'
-        video: 'Link da Aula'
+        video: 'Link da Aula na AWS'
         save: 'Salvar Aula'
       new:
         label: 'Nova Aula'
         success: 'Aula criada com sucesso!'
         error: 'Erro ao criar Aula! Tente novamente mais tarde!'
+      show:
+        title: 'Apresentação'
+        comments: 
+          title: 'Comentários'
+        recommended: 'Recomendados'
+        buttons:
+          next: 'Ir para Próxima Aula'
+          previous: 'Voltar para a Aula Anterior'
   modules:
     title: 'Módulos'
     extras:

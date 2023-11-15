@@ -1,0 +1,11 @@
+<div class='h-96 bg-cover shadow-sm shadow-white transition-shadow hover:shadow-lg hover:shadow-white flex items-center justify-center' style="background-image: url('<%= rails_blob_path(lesson_class.background, disposition: 'attachment') %>');">
+  <div class='text-center text-shadow shadow-black shadow-lg bg-black w-full mx-2'>
+    <div class='text-xl'>
+      <%= lesson_class.title %>
+    </div>
+
+    <div class='text-2xl font-bold'>
+      <%= lesson_class.description %>
+    </div>
+  </div>
+</div>

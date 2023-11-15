@@ -3,6 +3,7 @@ class CreateLessons < ActiveRecord::Migration[7.1]
     create_table :lessons do |t|
       t.belongs_to :lesson_class
       t.string :title
+      t.string :video_url
       t.timestamps
     end
   end

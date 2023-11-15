@@ -1,0 +1,8 @@
+<div class='my-3'>
+  <%= link_to lesson_class_lesson_path(params[:id], lesson), class: 'inline-flex items-center' do %>
+    <%= image_tag 'play_button', alt: 'Play Button', class: 'object-contain w-6' %>
+    <div class='ml-5 text-3xl hover:underline'>
+      <%= lesson.title %>
+    </div>
+  <% end %>
+</div>

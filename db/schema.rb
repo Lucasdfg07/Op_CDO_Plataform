@@ -63,6 +63,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_05_184623) do
   create_table "lessons", force: :cascade do |t|
     t.bigint "lesson_class_id"
     t.string "title"
+    t.string "video_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["lesson_class_id"], name: "index_lessons_on_lesson_class_id"

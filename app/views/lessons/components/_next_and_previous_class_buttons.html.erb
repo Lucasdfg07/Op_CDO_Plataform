@@ -1,0 +1,7 @@
+<div class='lg:col-start-2 lg:col-end-4 xs:col-start-1 xs:col-end-4 text-center'>
+  <%= link_to t('platform.lesson.show.buttons.previous'), lesson_class_lesson_path(params[:lesson_class_id], previous_lesson), class: 'md:text-2xl md:px-4 shadow-sm shadow-white py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 xs:text-base xs:px-1' if previous_lesson.present? %>
+</div>
+
+<div class='lg:col-span-2 lg:col-end-6 xs:col-start-4 xs:col-end-7 text-center'>
+  <%= link_to t('platform.lesson.show.buttons.next'), lesson_class_lesson_path(params[:lesson_class_id], next_lesson), class: 'md:text-2xl md:px-4 shadow-sm shadow-white py-2 rounded-lg bg-green-500 text-white hover:bg-green-600 xs:text-base xs:px-1' if next_lesson.present? %>
+</div>

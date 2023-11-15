@@ -1,1 +1,13 @@
-<%= image_tag lesson_class.background %>
+<div class='grid grid-cols-6 gap-4 pt-60 xs:pt-42'>
+  <div class='lg:col-start-3 lg:col-end-4 xs:col-start-1 xs:col-end-3'>
+    <%= render partial: 'shared/components/back_button', locals: { path: root_path } %>
+  </div>
+
+  <div class='lg:col-start-3 lg:col-end-4 xs:col-start-1 xs:col-end-4'>
+    <%= render partial: 'lesson_classes/components/lesson_class_item', locals: { lesson_class: @lesson_class }  %>
+  </div>
+
+  <div class='lg:col-start-4 lg:col-end-6 xs:col-start-4 xs:col-end-7'>
+    <%= render partial: 'lesson_classes/components/list_lessons', locals: { lesson_class: @lesson_class } %>
+  </div>
+<div>

@@ -1,0 +1,19 @@
+<div class='pt-60'>
+  <div class='grid grid-cols-6 gap-4 mt-5'>
+    <div class='lg:col-start-2 lg:col-span-4 xs:col-start-1 xs:col-end-7'>
+      <%= render partial: 'shared/components/back_button', locals: { path: lesson_class_path(params[:lesson_class_id]) } %>
+    </div>
+    
+    <div class='col-start-2 col-span-4 text-center text-4xl'>
+      <%= t('platform.lesson.show.title') %>
+    </div>
+  
+    <div class='lg:col-start-2 lg:col-span-4 xs:col-start-1 xs:col-end-7'>
+      <%= video_tag @lesson.video_url, class: 'w-full h-auto', :controls => true %>
+    </div>
+
+    <%= render partial: 'lessons/components/next_and_previous_class_buttons' %>
+  </div>
+
+  <%= render partial: 'lessons/components/recommended_lessons' %>
+</div>
