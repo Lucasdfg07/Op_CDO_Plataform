@@ -1,5 +1,9 @@
 <div class='pt-40 text-center'>
   <%= form_with(model: @lesson_class, url: admin_lesson_classes_path) do |form| %>
+    <div class='text-2xl'>
+      <%= t('platform.lesson_class.new.label') %>
+    </div>
+
     <div class='mt-4'>
       <%= t('platform.lesson_class.fields.title') %> <br />
       <%= form.text_field :title, required: true %>
@@ -21,8 +25,12 @@
       <small class="text-red-500"><%= t('platform.lesson_class.fields.background.warning') %></small>
     </div>
 
-    <div class='mt-4'>
-      <%= form.submit t('platform.lesson_class.fields.save') %>
+    <div class='mt-4 text-2xl'>
+      <%= form.submit t('platform.lesson_class.fields.save'), class: 'cursor-pointer hover:underline' %>
     </div>
+
+    <div class='mt-10'>
+    <%= render partial: 'shared/components/back_button', locals: { path: admin_home_index_path } %>
+  </div>
   <% end %>
 </div>

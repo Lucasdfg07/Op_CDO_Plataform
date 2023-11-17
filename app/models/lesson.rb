@@ -3,7 +3,7 @@ class Lesson < ApplicationRecord
   has_many :concluded_lessons
 
   validates :title, length: { maximum: 30 }
-  validates :video_url, presence: true
+  has_rich_text :description
 
   scope :concluded_by, -> (user) {
     joins(:concluded_lessons).where(concluded_lessons: { user_id: user.id })

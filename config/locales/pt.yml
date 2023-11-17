@@ -23,9 +23,12 @@ pt:
     lesson:
       fields:
         lesson_classes: 'Módulo que a aula pertence'
-        title: 'Título'
+        description: 'Descrição'
         video: 'Link da Aula na AWS'
         save: 'Salvar Aula'
+        title: 'Título'
+        blank: 
+          content: 'Selecione uma opção'
       new:
         label: 'Nova Aula'
         success: 'Aula criada com sucesso!'

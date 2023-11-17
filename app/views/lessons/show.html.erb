@@ -10,10 +10,15 @@
       </div>
     
       <div class='lg:col-start-2 lg:col-span-4 xs:col-start-1 xs:col-end-7 mt-5'>
-        <%= video_tag @lesson.video_url, class: 'w-full h-auto', :controls => true %>
-      </div>
+        <%= video_tag @lesson.video_url, class: 'w-full h-auto', :controls => true if @lesson.video_url.present? %>
 
+        <div class='text-center p-10 trix-content'>
+          <%= @lesson.description %>
+        </div>
+      </div>
+      
       <%= render partial: 'lessons/components/next_and_previous_lesson_buttons' %>
+      <%= render partial: 'lessons/components/seen_lesson_button', locals: { lesson: @lesson } %>
     </div>
 
     <div class='lg:col-start-6 lg:col-end-7 lg:block shadow-lg shadow-white/50 xs:hidden'>
@@ -21,7 +26,6 @@
     </div>
   </div>
 
-  <%= render partial: 'lessons/components/seen_lesson_button', locals: { lesson: @lesson } %>
 
   <%= render partial: 'lessons/components/recommended_lessons' %>
 </div>

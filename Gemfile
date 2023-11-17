@@ -9,7 +9,7 @@ gem "sassc-rails"
 
 gem "dotenv-rails", groups: [:development, :test]
 
-gem "rails", "~> 7.1.0"
+gem "rails", "~> 7.1.2"
 
 gem "sprockets-rails"
 
@@ -23,7 +23,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 gem "jbuilder"
-gem 'railties', '7.1.0'
+gem 'railties'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

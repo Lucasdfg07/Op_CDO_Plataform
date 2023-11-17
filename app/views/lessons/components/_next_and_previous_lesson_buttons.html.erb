@@ -1,23 +1,25 @@
-<div class='lg:col-start-2 lg:col-end-4 xs:col-start-1 xs:col-end-4 text-left'>
-  <% if previous_lesson.present? %>
-    <%= link_to lesson_class_lesson_path(params[:lesson_class_id], previous_lesson),
-      class: 'md:text-2xl md:px-4 inline-flex items-center shadow-lg shadow-white/30 py-2 rounded-lg 
-      bg-blue-500/40 text-white xs:text-base xs:px-1 hover:bg-blue-600' do
-    %>
-      <%= image_tag 'pointer', alt: 'Pointer', class: 'object-contain w-12 rotate-180' %>
-      <%= t('platform.lesson.show.buttons.previous') %>
+<div class='grid'>
+  <div class='lg:col-start-1 lg:col-end-4 lg:text-left xs:col-start-1 xs:col-end-7 xs:text-center xs:mt-5'>
+    <% if previous_lesson.present? %>
+      <%= link_to lesson_class_lesson_path(params[:lesson_class_id], previous_lesson),
+        class: 'md:text-2xl md:px-4 inline-flex items-center shadow-lg shadow-white/30 py-2 rounded-lg 
+        bg-blue-500/40 text-white xs:text-xl xs:px-1 hover:bg-blue-600' do
+      %>
+        <%= image_tag 'pointer', alt: 'Pointer', class: 'object-contain w-12 rotate-180' %>
+        <%= t('platform.lesson.show.buttons.previous') %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
-<div class='lg:col-span-2 lg:col-end-6 xs:col-start-4 xs:col-end-7 text-right'>
-  <% if next_lesson.present? %>
-    <%= link_to lesson_class_lesson_path(params[:lesson_class_id], next_lesson),
-      class: 'md:text-2xl md:px-4 inline-flex items-center shadow-lg shadow-white/30 py-2 rounded-lg 
-      bg-green-500/40 text-white xs:text-base xs:px-1 hover:bg-green-600' do
-    %>
-      <%= t('platform.lesson.show.buttons.next') %>
-      <%= image_tag 'pointer', alt: 'Pointer', class: 'object-contain w-12' %>
+  <div class='lg:col-start-4 lg:col-end-6 lg:text-right xs:col-start-1 xs:col-end-7 xs:text-center xs:mt-5'>
+    <% if next_lesson.present? %>
+      <%= link_to lesson_class_lesson_path(params[:lesson_class_id], next_lesson),
+        class: 'md:text-2xl md:px-4 inline-flex items-center shadow-lg shadow-white/30 py-2 rounded-lg 
+        bg-green-500/40 text-white xs:text-xl xs:px-1 hover:bg-green-600' do
+      %>
+        <%= t('platform.lesson.show.buttons.next') %>
+        <%= image_tag 'pointer', alt: 'Pointer', class: 'object-contain w-12' %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>

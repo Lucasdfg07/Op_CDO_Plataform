@@ -18,6 +18,6 @@ class Admin::LessonsController < ApplicationController
   private
 
   def permitted_params
-    params.require(:lesson).permit(:lesson_class_id, :title, :video_url)
+    params.require(:lesson).permit(:lesson_class_id, :title, :video_url, :description)
   end
 end

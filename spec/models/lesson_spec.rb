@@ -7,7 +7,8 @@ RSpec.describe Lesson, type: :model do
     Lesson.new(
       lesson_class_id: lesson_class.id,
       title: 'Test Title',
-      video_url: 'https://www.test.com.br/video.mp4'
+      video_url: 'https://www.test.com.br/video.mp4',
+      description: 'test'
     )
   end
 

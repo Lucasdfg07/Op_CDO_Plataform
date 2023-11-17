@@ -1,5 +1,7 @@
 @import 'fonts/jura';
+@import 'trix';
+@import 'actiontext';
 
-input[type=text], input[type=email], input[type=password] {
+input[type=text], input[type=email], input[type=password], select, textarea {
   color: black!important;
 }
