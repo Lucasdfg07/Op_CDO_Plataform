@@ -19,7 +19,11 @@ module LessonsHelper
     ConcludedLesson.find_by(user_id: user.id, lesson_id: lesson.id)
   end
 
-  def lesson_concluded_by_user?
-    @lesson.in? Lesson.concluded_by(current_user)
+  def lesson_concluded_by_user?(lesson)
+    lesson.in? Lesson.concluded_by(current_user)
+  end
+
+  def lessons_of_parent_lesson_class
+    @lesson.lesson_class.lessons
   end
 end

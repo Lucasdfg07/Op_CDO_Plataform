@@ -1,13 +1,11 @@
-<div class='lg:col-start-2 lg:col-end-4 xs:col-start-1 xs:col-end-4 text-left float-right'>
+<div class='lg:col-start-2 lg:col-end-4 xs:col-start-1 xs:col-end-4 text-left'>
   <% if previous_lesson.present? %>
     <%= link_to lesson_class_lesson_path(params[:lesson_class_id], previous_lesson),
       class: 'md:text-2xl md:px-4 inline-flex items-center shadow-lg shadow-white/30 py-2 rounded-lg 
       bg-blue-500/40 text-white xs:text-base xs:px-1 hover:bg-blue-600' do
     %>
       <%= image_tag 'pointer', alt: 'Pointer', class: 'object-contain w-12 rotate-180' %>
-      <div class='ml-5 text-3xl hover:underline'>
-        <%= t('platform.lesson.show.buttons.previous') %>
-      </div>
+      <%= t('platform.lesson.show.buttons.previous') %>
     <% end %>
   <% end %>
 </div>
@@ -18,9 +16,7 @@
       class: 'md:text-2xl md:px-4 inline-flex items-center shadow-lg shadow-white/30 py-2 rounded-lg 
       bg-green-500/40 text-white xs:text-base xs:px-1 hover:bg-green-600' do
     %>
-      <div class='ml-5 text-3xl hover:underline'>
-        <%= t('platform.lesson.show.buttons.next') %>
-      </div>
+      <%= t('platform.lesson.show.buttons.next') %>
       <%= image_tag 'pointer', alt: 'Pointer', class: 'object-contain w-12' %>
     <% end %>
   <% end %>

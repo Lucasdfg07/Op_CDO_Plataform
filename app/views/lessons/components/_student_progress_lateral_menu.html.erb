@@ -1,0 +1,18 @@
+<div>
+  <div class='text-center text-2xl'>
+    <%= t('platform.lesson.show.sidebar.progress') %>
+  </div>
+  
+  <div class='mx-10 my-5'>
+    <% lessons_of_parent_lesson_class.each do |lesson| %>
+      <%= link_to lesson_class_lesson_path(params[:lesson_class_id], lesson.id), class: 'w-fit block mt-5' do %>
+        <div class='<%= lesson.id == @lesson.id && 'font-bold' %> hover:font-bold'>
+          <%= lesson.title %>
+          <% if lesson_concluded_by_user?(lesson) %>
+            - <%= t('platform.lesson.show.sidebar.concluded') %>
+          <% end %>
+        </div> 
+      <% end %>
+    <% end %>
+  </div>
+</div>

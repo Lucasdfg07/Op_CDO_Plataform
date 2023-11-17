@@ -39,6 +39,9 @@ pt:
           next: 'Ir para Próxima Aula'
           previous: 'Voltar para a Aula Anterior'
           seen: 'Marcar como Visto'
+        sidebar:
+          progress: 'Meu Progresso'
+          concluded: 'Concluída ✔'
   modules:
     title: 'Módulos'
     extras:

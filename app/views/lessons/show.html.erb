@@ -1,20 +1,27 @@
 <div class='pt-60'>
   <div class='grid grid-cols-6 gap-4 mt-5'>
-    <div class='lg:col-start-2 lg:col-span-4 xs:col-start-1 xs:col-end-7'>
-      <%= render partial: 'shared/components/back_button', locals: { path: lesson_class_path(params[:lesson_class_id]) } %>
-    </div>
+    <div class='lg:col-start-1 lg:col-end-6 xs:col-start-1 xs:col-end-7'>
+      <div class='lg:col-start-2 lg:col-span-4 xs:col-start-1 xs:col-end-7'>
+        <%= render partial: 'shared/components/back_button', locals: { path: lesson_class_path(params[:lesson_class_id]) } %>
+      </div>
+      
+      <div class='col-start-2 col-span-4 text-center text-4xl'>
+        <%= t('platform.lesson.show.title') %>
+      </div>
     
-    <div class='col-start-2 col-span-4 text-center text-4xl'>
-      <%= t('platform.lesson.show.title') %>
-    </div>
-  
-    <div class='lg:col-start-2 lg:col-span-4 xs:col-start-1 xs:col-end-7'>
-      <%= video_tag @lesson.video_url, class: 'w-full h-auto', :controls => true %>
+      <div class='lg:col-start-2 lg:col-span-4 xs:col-start-1 xs:col-end-7 mt-5'>
+        <%= video_tag @lesson.video_url, class: 'w-full h-auto', :controls => true %>
+      </div>
+
+      <%= render partial: 'lessons/components/next_and_previous_lesson_buttons' %>
     </div>
 
-    <%= render partial: 'lessons/components/next_and_previous_lesson_buttons' %>
+    <div class='lg:col-start-6 lg:col-end-7 lg:block shadow-lg shadow-white/50 xs:hidden'>
+      <%= render partial: 'lessons/components/student_progress_lateral_menu' %>
+    </div>
   </div>
 
-  <%= render partial: 'lessons/components/seen_lesson_button' %>
+  <%= render partial: 'lessons/components/seen_lesson_button', locals: { lesson: @lesson } %>
+
   <%= render partial: 'lessons/components/recommended_lessons' %>
 </div>

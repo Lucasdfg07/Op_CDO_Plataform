@@ -1,4 +1,4 @@
-<% if lesson_concluded_by_user? %>
+<% if lesson_concluded_by_user?(@lesson) %>
   <%= render template: 'concluded_lessons/delete', locals: {
     concluded_lesson: concluded_lesson(current_user, @lesson),
     url: lesson_class_lesson_concluded_lesson_path(params[:lesson_class_id], params[:id])

@@ -1,7 +1,7 @@
 <%= hidden_field_tag :user_id, current_user.id %>
   
 <div class='text-center my-10'>
-  <button type="submit" class="inline-flex cursor-pointer <%= lesson_concluded_by_user? ? 'bg-lime-700/70 hover:bg-lime-500/70' : 'bg-black/70 hover:bg-lime-700/70' %> items-center shadow-sm shadow-slate-300 rounded-2xl p-2 transition duration-300 ease-in-out">
+  <button type="submit" class="inline-flex cursor-pointer <%= lesson_concluded_by_user?(@lesson) ? 'bg-lime-700/70 hover:bg-lime-500/70' : 'bg-black/70 hover:bg-lime-700/70' %> items-center shadow-sm shadow-slate-300 rounded-2xl p-2 transition duration-300 ease-in-out">
     <div class='mr-5 text-xl'>
       <%= t('platform.lesson.show.buttons.seen') %>
     </div>
