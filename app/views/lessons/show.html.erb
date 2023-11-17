@@ -12,8 +12,9 @@
       <%= video_tag @lesson.video_url, class: 'w-full h-auto', :controls => true %>
     </div>
 
-    <%= render partial: 'lessons/components/next_and_previous_class_buttons' %>
+    <%= render partial: 'lessons/components/next_and_previous_lesson_buttons' %>
   </div>
 
+  <%= render partial: 'lessons/components/seen_lesson_button' %>
   <%= render partial: 'lessons/components/recommended_lessons' %>
 </div>

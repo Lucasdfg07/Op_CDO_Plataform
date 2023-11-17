@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   end
 
   resources :lesson_classes, only: [:show] do
-    resources :lessons, only: [:show]
+    resources :lessons, only: [:show] do
+      resources :concluded_lessons, only: [:create, :destroy]
+    end
   end
 end

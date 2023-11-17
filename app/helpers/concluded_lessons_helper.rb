@@ -1,0 +1,2 @@
+module ConcludedLessonsHelper
+end

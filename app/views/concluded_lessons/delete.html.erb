@@ -1,0 +1,7 @@
+<%= turbo_frame_tag "concluded_lesson_form" do %>
+  <%= form_with(model: concluded_lesson, url: url, method: :delete) do |form| %>
+    <%= hidden_field_tag :concluded_lesson_id, concluded_lesson.id %>
+
+    <%= render partial: 'concluded_lessons/form', locals: { form: form } %>
+  <% end %>
+<% end %>

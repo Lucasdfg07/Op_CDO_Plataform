@@ -12,8 +12,10 @@ pt:
         title: 'Título'
         description: 'Descrição'
         complementary: 'Marque caso seja um Módulo Complementar'
-        background: 'Imagem de Fundo'
         save: 'Salvar Módulo'
+        background: 
+          title: 'Imagem de Fundo'
+          warning: 'Tamanho máximo do arquivo: 1MB'
       new:
         label: 'Novo Módulo'
         success: 'Módulo criado com sucesso!'
@@ -36,6 +38,7 @@ pt:
         buttons:
           next: 'Ir para Próxima Aula'
           previous: 'Voltar para a Aula Anterior'
+          seen: 'Marcar como Visto'
   modules:
     title: 'Módulos'
     extras:

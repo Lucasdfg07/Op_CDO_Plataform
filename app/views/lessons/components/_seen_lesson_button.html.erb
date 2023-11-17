@@ -1,0 +1,11 @@
+<% if lesson_concluded_by_user? %>
+  <%= render template: 'concluded_lessons/delete', locals: {
+    concluded_lesson: concluded_lesson(current_user, @lesson),
+    url: lesson_class_lesson_concluded_lesson_path(params[:lesson_class_id], params[:id])
+  } %>
+<% else %>
+  <%= render template: 'concluded_lessons/new', locals: {
+    concluded_lesson: new_concluded_lesson,
+    url: lesson_class_lesson_concluded_lessons_path(params[:lesson_class_id], params[:id])
+  } %>
+<% end %>

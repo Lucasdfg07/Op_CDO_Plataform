@@ -2,12 +2,12 @@
   <%= form_with(model: @lesson_class, url: admin_lesson_classes_path) do |form| %>
     <div class='mt-4'>
       <%= t('platform.lesson_class.fields.title') %> <br />
-      <%= form.text_field :title %>
+      <%= form.text_field :title, required: true %>
     </div>
 
     <div class='mt-4'>
       <%= t('platform.lesson_class.fields.description') %> <br />
-      <%= form.text_field :description %>
+      <%= form.text_field :description, required: true %>
     </div>
 
     <div class='mt-4'>
@@ -16,8 +16,9 @@
     </div>
 
     <div class='mt-4'>
-      <%= t('platform.lesson_class.fields.background') %> <br />
-      <%= form.file_field :background %>
+      <%= t('platform.lesson_class.fields.background.title') %> <br />
+      <%= form.file_field :background, accept: 'image/jpeg, image/jpg', required: true %> <br />
+      <small class="text-red-500"><%= t('platform.lesson_class.fields.background.warning') %></small>
     </div>
 
     <div class='mt-4'>

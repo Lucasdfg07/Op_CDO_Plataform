@@ -1,0 +1,5 @@
+<%= turbo_frame_tag "concluded_lesson_form" do %>
+  <%= form_with(model: concluded_lesson, url: url) do |form| %>
+    <%= render partial: 'concluded_lessons/form', locales: { form: form } %>
+  <% end %>
+<% end %>
