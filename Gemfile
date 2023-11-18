@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "3.0.5"
 
 gem "devise"
+gem "devise-i18n"
 
 gem "tailwindcss-rails"
 gem "sassc-rails"

@@ -12,6 +12,7 @@ module.exports = {
       backgroundImage: {
         'main-image': "url('backgrounds/background.jpg')",
         'abstract-wallpaper': "url('backgrounds/abstract-wallpaper.jpeg')",
+        'login-wallpaper': "url('backgrounds/login-wallpaper.jpeg')",
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',

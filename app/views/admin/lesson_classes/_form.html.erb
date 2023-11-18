@@ -1,0 +1,36 @@
+<div class='pt-40 text-center'>
+  <%= form_with(model: lesson_class, url: url) do |form| %>
+    <div class='text-2xl'>
+      <%= title %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson_class.fields.title') %> <br />
+      <%= form.text_field :title, value: lesson_class.title, required: true %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson_class.fields.description') %> <br />
+      <%= form.text_field :description, value: lesson_class.description, required: true %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson_class.fields.complementary') %> <br />
+      <%= form.check_box :complementary, checked: lesson_class.complementary %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.lesson_class.fields.background.title') %> <br />
+      <%= form.file_field :background, accept: 'image/jpeg, image/jpg' %> <br />
+      <small class="text-red-500"><%= t('platform.lesson_class.fields.background.warning') %></small>
+    </div>
+
+    <div class='mt-4 text-2xl'>
+      <%= form.submit t('platform.lesson_class.fields.save'), class: 'cursor-pointer hover:underline' %>
+    </div>
+
+    <div class='mt-10'>
+      <%= render partial: 'shared/components/back_button', locals: { path: admin_home_index_path } %>
+    </div>
+  <% end %>
+</div>

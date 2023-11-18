@@ -1,13 +1,18 @@
 pt:
   user:
     session:
+      home: 'Página Inicial'
+      admin_panel: 'Painel Administrativo'
       quit: 'Sair'
       back: 'Voltar'
   platform:
+    object:
+      delete: 'Tem Certeza?!'
     home:
       subtitle: 'Plataforma Operação Código de Ouro'
       title: 'LEVANDO SUA CARREIRA ATÉ O MERCADO INTERNACIONAL'
     lesson_class:
+      plural_title: 'Módulos'
       fields:
         title: 'Título'
         description: 'Descrição'
@@ -20,12 +25,14 @@ pt:
         label: 'Novo Módulo'
         success: 'Módulo criado com sucesso!'
         error: 'Erro ao criar módulo! Tente novamente mais tarde!'
+      edit:
+        label: 'Editar Módulo'
     lesson:
       fields:
         lesson_classes: 'Módulo que a aula pertence'
         description: 'Descrição'
         video: 'Link da Aula na AWS'
-        save: 'Salvar Aula'
+        save: 'Salvar'
         title: 'Título'
         blank: 
           content: 'Selecione uma opção'
@@ -33,6 +40,8 @@ pt:
         label: 'Nova Aula'
         success: 'Aula criada com sucesso!'
         error: 'Erro ao criar Aula! Tente novamente mais tarde!'
+      edit:
+        label: 'Editar Aula'
       show:
         title: 'Apresentação'
         comments: 
@@ -45,6 +54,7 @@ pt:
         sidebar:
           progress: 'Meu Progresso'
           concluded: 'Concluída ✔'
+      plural_title: 'Aulas'
   modules:
     title: 'Módulos'
     extras:

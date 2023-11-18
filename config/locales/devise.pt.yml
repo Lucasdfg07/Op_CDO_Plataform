@@ -31,7 +31,7 @@ pt:
       user:
         one: Usuário
         other: Usuários
-  devise:
+  users:
     confirmations:
       confirmed: A sua conta foi confirmada com sucesso.
       new:

@@ -1,13 +1,19 @@
 <nav class='bg-black/60 shadow-lg shadow-white/30 fixed w-full'>
-  <div class='grid grid-cols-6 gap-4 items-center'>
+  <div class='grid grid-cols-6 items-center'>
     <div class='col-start-1 col-end-2 flex items-center justify-center'>
       <%= link_to root_path do %>
         <%= image_tag 'logo-op-cdo', alt: 'Logo', class: 'object-contain w-32' %>
       <% end %>
     </div>
 
-    <div class='col-end-7 col-span-1 m-auto'>
-      <%= link_to t("user.session.quit"), destroy_user_session_path, class: 'text-lg hover:underline' %>
+    <div class='col-end-7 col-span-5 text-right'>
+        <%= link_to t("user.session.home"), root_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> |
+
+        <% if current_user.admin? %>
+          <%= link_to t("user.session.admin_panel"), admin_home_index_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> | 
+        <% end %>
+
+        <%= link_to t("user.session.quit"), destroy_user_session_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %>
     </div>
   </div>
 </nav>

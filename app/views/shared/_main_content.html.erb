@@ -1,5 +1,5 @@
-<%= render partial: 'shared/navbar' if user_signed_in? %>
-
-<%= yield %>
-
-<%= render partial: 'shared/alerts' %>
+<% if user_signed_in? %>
+  <%= render partial: 'shared/logged_content' %>
+<% else %>
+  <%= render partial: 'shared/unlogged_content' %>
+<% end %>

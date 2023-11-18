@@ -1,11 +1,13 @@
 class LessonClass < ApplicationRecord
-  has_many :lessons
+  has_many :lessons, dependent: :destroy
 
   validates :title, length: { maximum: 30 }
   validates :description, length: { maximum: 50 }
 
   validate :background_file_size
   has_one_attached :background
+
+  validates :background, presence: true
 
   scope :complementary_classes, -> () {
     where(complementary: true)
