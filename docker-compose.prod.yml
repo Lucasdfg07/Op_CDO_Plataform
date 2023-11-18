@@ -11,6 +11,8 @@ services:
       - "5432:5432"
   app:
     build: .
+    env_file:
+      - .env
     command: bash -c "bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/op_codigo_de_ouro
