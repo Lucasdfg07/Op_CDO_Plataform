@@ -7,6 +7,7 @@ gem "devise-i18n"
 
 gem "tailwindcss-rails"
 gem "sassc-rails"
+gem "sassc", "~> 2.1.0"
 
 gem "dotenv-rails", groups: [:development, :test]
 
