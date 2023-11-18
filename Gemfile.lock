@@ -273,6 +273,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    serviceworker-rails (0.6.0)
+      railties (>= 3.1)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -333,6 +335,7 @@ DEPENDENCIES
   rspec-rails
   sassc-rails
   selenium-webdriver
+  serviceworker-rails
   sprockets-rails
   stimulus-rails
   tailwindcss-rails

@@ -43,27 +43,6 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              ENV['MAIL_ADDRESS'],
-    port:                 ENV['MAIL_PORT'],
-    user_name:            ENV['DEVISE_EMAIL'],
-    password:             ENV['DEVISE_PASSWORD'],
-    authentication:       'plain',
-    enable_starttls_auto: true 
-  }
-
-  # config.action_mailer.default_url_options = { host: 'napp-dirlic.centro.iff.edu.br' }
-  # config.action_mailer.smtp_settings = {
-  #   :address => "mail.iff.edu.br",
-  #   :port => 587,
-  #   :domain => "iff.edu.br",
-  #   :authentication => :login,
-  #   :user_name => "napp_dirlic.centro@iff.edu.br",
-  #   :password => "Atpa2020.",
-  #   :enable_starttls_auto => true,
-  #   :openssl_verify_mode  => 'none'
-  # }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

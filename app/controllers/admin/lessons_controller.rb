@@ -1,4 +1,4 @@
-class Admin::LessonsController < ApplicationController
+class Admin::LessonsController < Admin::AdminBaseController
   before_action :set_lesson, only: [:edit, :update, :destroy]
 
   def new

@@ -5,6 +5,7 @@ pt:
       admin_panel: 'Painel Administrativo'
       quit: 'Sair'
       back: 'Voltar'
+      denied: 'Acesso Negado.'
   platform:
     object:
       delete: 'Tem Certeza?!'
