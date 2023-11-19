@@ -16,5 +16,5 @@ test:
 production:
   <<: *default
   database: op_codigo_de_ouro_platform_production
-  username: op_codigo_de_ouro_platform
-  password: <%= ENV["OP_CODIGO_DE_OURO_PLATFORM_DATABASE_PASSWORD"] %>
+  username: <%= ENV['PSQL_USERNAME'] %>
+  password: <%= ENV["PSQL_PASSWORD"] %>
