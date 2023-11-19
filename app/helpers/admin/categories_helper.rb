@@ -1,4 +1,4 @@
-module HomeHelper
+module Admin::CategoriesHelper
   def categories
     Category.all.order(id: :asc)
   end

@@ -39,6 +39,6 @@ class Admin::LessonClassesController < Admin::AdminBaseController
   end
 
   def permitted_params
-    params.require(:lesson_class).permit(:title, :description, :complementary, :background)
+    params.require(:lesson_class).permit(:category_id, :title, :description, :background)
   end
 end

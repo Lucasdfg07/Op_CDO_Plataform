@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :home, only: [:index]
     resources :lesson_classes, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :lessons, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :categories, only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
   resources :lesson_classes, only: [:show] do

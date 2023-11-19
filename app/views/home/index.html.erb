@@ -1,3 +1,5 @@
 <%= render partial: 'presentation' %>
-<%= render partial: 'lesson_classes/components/main_modules' %>
-<%= render partial: 'lesson_classes/components/complementary_modules' %>
+
+<% categories.each do |category| %>
+  <%= render partial: 'lesson_classes/components/modules', locals: { category: category } %>
+<% end %>

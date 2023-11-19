@@ -1,9 +1,10 @@
+
 <div class='mt-20 text-shadow shadow-black'>
   <div class='text-4xl underline ml-10'>
-    <%= t('modules.extras.title') %>
+    <%= category.title %>
   </div>
 
   <div class='grid mt-5 lg:grid-cols-6 lg:gap-0 md:grid-cols-3 xs:grid-cols-2'>
-    <%= render complementary_lesson_classes %>
+    <%= render category.lesson_classes %>
   </div>
 </div>

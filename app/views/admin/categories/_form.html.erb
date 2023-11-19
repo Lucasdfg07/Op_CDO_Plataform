@@ -1,0 +1,20 @@
+<div class='pt-40 text-center'>
+  <%= form_with(model: category, url: url) do |form| %>
+    <div class='text-2xl'>
+      <%= title %>
+    </div>
+
+    <div class='mt-4'>
+      <%= t('platform.category.fields.title') %> <br />
+      <%= form.text_field :title, value: category.title, required: true %>
+    </div>
+
+    <div class='mt-4 text-2xl'>
+      <%= form.submit t('platform.category.fields.save'), class: 'cursor-pointer hover:underline' %>
+    </div>
+
+    <div class='mt-10'>
+      <%= render partial: 'shared/components/back_button', locals: { path: admin_home_index_path } %>
+    </div>
+  <% end %>
+</div>

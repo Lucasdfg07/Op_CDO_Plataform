@@ -15,13 +15,14 @@ pt:
     lesson_class:
       plural_title: 'Módulos'
       fields:
+        category: 'Categoria'
         title: 'Título'
         description: 'Descrição'
-        complementary: 'Marque caso seja um Módulo Complementar'
         save: 'Salvar Módulo'
         background: 
           title: 'Imagem de Fundo'
           warning: 'Tamanho máximo do arquivo: 1MB'
+          error: 'Arquivo muito grande! O tamanho máximo é de 1MB.'
       new:
         label: 'Novo Módulo'
         success: 'Módulo criado com sucesso!'
@@ -29,14 +30,13 @@ pt:
       edit:
         label: 'Editar Módulo'
     lesson:
+      plural_title: 'Aulas'
       fields:
         lesson_classes: 'Módulo que a aula pertence'
         description: 'Descrição'
         video: 'Link da Aula na AWS'
         save: 'Salvar'
         title: 'Título'
-        blank: 
-          content: 'Selecione uma opção'
       new:
         label: 'Nova Aula'
         success: 'Aula criada com sucesso!'
@@ -55,7 +55,19 @@ pt:
         sidebar:
           progress: 'Meu Progresso'
           concluded: 'Concluída ✔'
-      plural_title: 'Aulas'
+    category:
+      plural_title: 'Categorias'
+      fields:
+        title: 'Categoria'
+        save: 'Salvar'
+      new:
+        label: 'Nova Categoria'
+        success: 'Categoria criada com sucesso!'
+        error: 'Erro ao criar Categoria! Tente novamente mais tarde!'
+      edit:
+        label: 'Editar Categoria'
+  blank: 
+    content: 'Selecione uma opção'
   modules:
     title: 'Módulos'
     extras:

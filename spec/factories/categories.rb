@@ -1,6 +1,5 @@
 FactoryBot.define do
-  factory :lesson do
+  factory :category do
     title { "Test Title" }
-    lesson_class
   end
 end

@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe LessonClass, type: :model do
+  let(:category) { create(:category) }
+
   let(:lesson_class) do
     LessonClass.create(
       title: 'test',
       description: 'test',
-      complementary: false,
+      category_id: category.id
     )
   end
 

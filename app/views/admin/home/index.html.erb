@@ -1,9 +1,9 @@
 <div class='pt-40 text-center text-2xl'>
   <%= link_to t('platform.lesson_class.new.label'), new_admin_lesson_class_path %> | 
-
-  <%= link_to t('platform.lesson.new.label'), new_admin_lesson_path %>
+  <%= link_to t('platform.lesson.new.label'), new_admin_lesson_path %> | 
+  <%= link_to t('platform.category.new.label'), new_admin_category_path %>
 </div>
 
-<div>
-  <%= render template: 'admin/lessons/index' %>
-</div>
+<%= render template: 'admin/lessons/index' %>
+<%= render template: 'admin/lesson_classes/index' %>
+<%= render template: 'admin/categories/index' %>

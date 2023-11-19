@@ -7,7 +7,7 @@
     <%= form_with(model: lesson, url: url) do |form| %>
       <div class='mt-4'>
         <%= t('platform.lesson.fields.lesson_classes') %> <br />
-        <%= form.collection_select :lesson_class_id, LessonClass.all, :id, :title, { include_blank: t('platform.lesson.fields.blank.content') }, { required: true, value: lesson.lesson_class_id } %>
+        <%= form.collection_select :lesson_class_id, LessonClass.all, :id, :title, { include_blank: t('blank.content') }, { required: true, value: lesson.lesson_class_id } %>
       </div>
 
       <div class='mt-4'>

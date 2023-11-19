@@ -139,6 +139,7 @@ pt:
       unlocked: A sua conta foi desbloqueada com sucesso. Efetue login para continuar.
   errors:
     messages:
+      record_invalid: 'A validação falhou: %{errors}'
       already_confirmed: já foi confirmado
       confirmation_period_expired: É necessário ser confirmado dentro do período %{period}, por favor requisite um novo usuário.
       expired: expirou, por favor solicite uma nova

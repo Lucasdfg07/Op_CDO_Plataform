@@ -52,6 +52,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_17_204244) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "lesson_id"
@@ -75,8 +81,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_17_204244) do
     t.string "title"
     t.string "description"
     t.boolean "complementary"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_lesson_classes_on_category_id"
   end
 
   create_table "lessons", force: :cascade do |t|
