@@ -1,44 +1,26 @@
-<div class="relative overflow-x-auto">
-  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-      <tr>
-        <th scope="col" class="px-6 py-3">
-          <%= t('platform.lesson.fields.id') %>
-        </th>
-        <th scope="col" class="px-6 py-3">
-          <%= t('platform.lesson.fields.title') %>
-        </th>
-        <th scope="col" class="px-6 py-3"></th>
-        <th scope="col" class="px-6 py-3"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% lessons.each do |lesson| %>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-          <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-            <%= lesson.id %>
-          </td>
-          <td class="px-6 py-4">
-            <%= link_to lesson.title, lesson_class_lesson_path(lesson.lesson_class.id, lesson.id), class: 'hover:blue hover:underline' %>
-          </td>
-          <td class="px-6 py-4">
-            <%= link_to edit_admin_lesson_path(lesson), class: "text-indigo-600 hover:text-indigo-900" do %>
-              <%= image_tag 'pen', alt: 'Pen Edit Icon', class: 'w-6' %>
-            <% end %>
-          </td>
-          <td class="px-6 py-4">
-            <%= link_to admin_lesson_path(lesson),
-              class: "text-red-600 hover:text-red-900",
-              data: {
-                turbo_method: "delete",
-                turbo_confirm: t('platform.object.delete')
-              } do
-            %>
-              <%= image_tag 'trash', alt: 'Trash Delete Icon', class: 'w-6' %>
-            <% end %>
-          </td>
-        </tr>
+<% lesson_class.lessons.each do |lesson| %>
+  <tr class="bg-white border-b dark:bg-white dark:border-gray-700">
+    <td class="px-6 py-4 font-medium whitespace-nowrap text-black">
+      <%= lesson.id %>
+    </td>
+    <td class="px-6 py-4" colspan="2">
+      <%= link_to lesson.title, lesson_class_lesson_path(lesson.lesson_class.id, lesson.id), class: 'hover:blue hover:underline' %>
+    </td>
+    <td class="px-6 py-4">
+      <%= link_to edit_admin_lesson_path(lesson), class: "text-indigo-600 hover:text-indigo-900" do %>
+        <%= image_tag 'pen', alt: 'Pen Edit Icon', class: 'w-6' %>
       <% end %>
-    </tbody>
-  </table>
-</div>
+    </td>
+    <td class="px-6 py-4">
+      <%= link_to admin_lesson_path(lesson),
+        class: "text-red-600 hover:text-red-900",
+        data: {
+          turbo_method: "delete",
+          turbo_confirm: t('platform.object.delete')
+        } do
+      %>
+        <%= image_tag 'trash', alt: 'Trash Delete Icon', class: 'w-6' %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

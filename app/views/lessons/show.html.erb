@@ -10,7 +10,7 @@
       </div>
     
       <div class='lg:col-start-2 lg:col-span-4 xs:col-start-1 xs:col-end-7 mt-5'>
-        <%= video_tag @lesson.video_url, class: 'w-full h-auto custom-video', controls: false if @lesson.video_url.present? %>
+        <%= video_tag @lesson.video_url, class: 'w-full h-auto custom-video', controls: true, controlsList: 'nodownload' if @lesson.video_url.present? %>
         <%= render partial: 'lessons/components/disable_video_download' %>
 
         <div class='text-center p-10 trix-content'>

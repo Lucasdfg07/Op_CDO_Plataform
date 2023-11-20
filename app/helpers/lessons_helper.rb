@@ -4,11 +4,11 @@ module LessonsHelper
   end
 
   def next_lesson
-    Lesson.find_by(id: @lesson.id + 1)
+    Lesson.where("id > ? AND lesson_class_id = ?", @lesson.id, @lesson.lesson_class_id).order(id: :asc).first
   end
-
+  
   def previous_lesson
-    Lesson.find_by(id: @lesson.id - 1)
+    Lesson.where("id < ? AND lesson_class_id = ?", @lesson.id, @lesson.lesson_class_id).order(id: :desc).first
   end
 
   def new_concluded_lesson

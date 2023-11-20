@@ -1,5 +1,1 @@
-<div class='text-2xl mt-10'>
-  <%= t('platform.lesson.plural_title') %>
-</div>
-
-<%= render partial: 'admin/lessons/components/lessons_table' %>
+<%= render partial: 'admin/lessons/components/lessons_table', locals: { lesson_class: lesson_class } %>
