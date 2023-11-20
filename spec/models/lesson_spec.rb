@@ -22,7 +22,7 @@ RSpec.describe Lesson, type: :model do
   context 'invalid payload' do
     context 'with invalid title' do
       before do
-        lesson.title = 'Invalid Title' * 20
+        lesson.title = ''
       end
 
       it 'return falsey' do
