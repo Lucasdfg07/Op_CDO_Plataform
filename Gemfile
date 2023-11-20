@@ -9,7 +9,7 @@ gem "tailwindcss-rails"
 gem "sassc-rails"
 gem "sassc", "~> 2.1.0"
 
-gem "dotenv-rails", groups: [:development, :test]
+gem "dotenv-rails"
 
 gem "rails", "~> 7.1.2"
 
