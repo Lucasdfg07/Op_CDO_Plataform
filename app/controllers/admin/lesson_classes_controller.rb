@@ -8,10 +8,9 @@ class Admin::LessonClassesController < Admin::AdminBaseController
   def create
     @lesson_class = LessonClass.new(permitted_params)
 
-    if @lesson_class.save
+    if @lesson_class.save!
       redirect_to admin_home_index_path, notice: t('platform.lesson_class.new.success')
     else
-      flash[:alert] = @lesson_class.errors.full_messages.join(', ')
       redirect_to new_admin_lesson_class_path
     end
   end

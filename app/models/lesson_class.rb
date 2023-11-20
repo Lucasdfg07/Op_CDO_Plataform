@@ -2,7 +2,7 @@ class LessonClass < ApplicationRecord
   has_many :lessons, dependent: :destroy
   belongs_to :category
 
-  validates :title, length: { maximum: 30 }
+  validates :title, length: { maximum: 50 }
   validates :description, length: { maximum: 50 }
 
   validate :background_file_size
