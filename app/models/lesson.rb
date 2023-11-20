@@ -2,7 +2,7 @@ class Lesson < ApplicationRecord
   belongs_to :lesson_class
   has_many :concluded_lessons, dependent: :destroy
 
-  validates :title, length: { maximum: 30 }
+  validates :title, presence: true
   has_rich_text :description
 
   scope :concluded_by, -> (user) {
