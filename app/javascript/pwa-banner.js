@@ -1,13 +1,3 @@
-function wasBannerRecentlyClosed() {
-  const bannerClosedTime = localStorage.getItem('bannerClosedTime');
-  if (!bannerClosedTime) {
-    return false;
-  }
-
-  const timeElapsed = new Date().getTime() - new Date(bannerClosedTime).getTime();
-  return timeElapsed < 3 * 24 * 60 * 60 * 1000; // 3 dias em milissegundos
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   const installBanner = document.getElementById('install_banner');
   const closeBannerButton = document.getElementById('close_banner');
@@ -32,15 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  if (installBanner && closeBannerButton) {
-    closeBannerButton.addEventListener('click', () => {
-      installBanner.style.display = 'none';
-      localStorage.setItem('bannerClosedTime', new Date().toISOString());
-    });
-
-    if (deferredPrompt) {
-      installBanner.addEventListener('click', () => {
-        installBanner.style.display = 'none';
+  if (installBanner) {
+    installBanner.addEventListener('click', () => {
+      if (deferredPrompt) {
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
@@ -50,7 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           deferredPrompt = null;
         });
-      });
-    }
+      }
+    });
+  }
+
+  if (closeBannerButton) {
+    closeBannerButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Impede que o evento se propague para o banner
+      installBanner.style.display = 'none';
+      localStorage.setItem('bannerClosedTime', new Date().toISOString());
+    });
   }
 });
