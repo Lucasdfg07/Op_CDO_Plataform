@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBannerButton.addEventListener('click', (event) => {
       event.stopPropagation();
       installBanner.style.display = 'none';
+      closeBannerButton.style.display = 'none';
       localStorage.setItem('bannerClosedTime', new Date().toISOString());
     });
   }
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     installBanner.addEventListener('click', () => {
       if (deferredPrompt) {
         installBanner.style.display = 'none';
+        closeBannerButton.style.display = 'none';
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
