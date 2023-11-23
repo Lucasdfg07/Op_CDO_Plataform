@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <link rel="manifest" href="/assets/manifest.json">
+    <link rel="manifest" href="/manifest.json">
     <script type="text/javascript">
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/serviceworker.js')
@@ -26,6 +26,8 @@
   </head>
 
   <body class='bg-abstract-wallpaper bg-fixed bg-cover text-white'>
+    <%= javascript_include_tag 'pwa-banner' %>
+
     <%= render partial: 'shared/main_content' %>
     <%= render partial: 'shared/alerts' %>
 

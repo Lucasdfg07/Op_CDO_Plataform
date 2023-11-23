@@ -20,6 +20,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/serviceworker.js', to: 'serviceworker#serviceworker'
+  get '/assets/serviceworker', to: 'serviceworker#serviceworker'
   get '/manifest.json', to: 'serviceworker#manifest'
 end
