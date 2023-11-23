@@ -46,6 +46,8 @@ gem "aws-sdk-s3", require: false
 
 gem "serviceworker-rails"
 
+gem 'rack-cors'
+
 group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
   gem "rspec-rails"
