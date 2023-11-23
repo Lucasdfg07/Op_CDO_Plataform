@@ -19,4 +19,7 @@ Rails.application.routes.draw do
       resources :concluded_lessons, only: [:create, :destroy]
     end
   end
+
+  get '/serviceworker.js', to: 'serviceworker#serviceworker'
+  get '/manifest.json', to: 'serviceworker#manifest'
 end
