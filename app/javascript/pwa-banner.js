@@ -1,8 +1,13 @@
+function isRunningAsPWA() {
+  return (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
+}
+
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
-  // Verificar se o usuário já interagiu com o prompt de instalação
-  if (localStorage.getItem('pwaInstallPrompted')) {
+  // Não exibe o banner se estiver rodando como PWA
+  if (isRunningAsPWA()) {
+    console.log('Rodando como um PWA, banner não será exibido.');
     return;
   }
 
@@ -18,11 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const installBanner = document.getElementById('install_banner');
   if (installBanner) {
     installBanner.addEventListener('click', () => {
-      if (deferredPrompt) {
+      if (deferredPrompt) { // Verifica se deferredPrompt foi definido
         installBanner.style.display = 'none';
         deferredPrompt.prompt(); // Mostra o prompt de instalação
         deferredPrompt.userChoice.then((choiceResult) => {
-          localStorage.setItem('pwaInstallPrompted', 'true'); // Armazenar que o usuário foi solicitado
           if (choiceResult.outcome === 'accepted') {
             console.log('Usuário aceitou a instalação do PWA');
           } else {
