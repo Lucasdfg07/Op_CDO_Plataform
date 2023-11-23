@@ -8,6 +8,10 @@ function wasBannerRecentlyClosed() {
   return timeElapsed < 3 * 24 * 60 * 60 * 1000; // 3 dias em milissegundos
 }
 
+function isRunningAsPWA() {
+  return (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const installBanner = document.getElementById('install_banner');
   const closeBannerButton = document.getElementById('close_banner');
@@ -32,9 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Manipulador de eventos para o botão 'X'
+  if (closeBannerButton) {
+    closeBannerButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Impede que o evento se propague para o banner
+      installBanner.style.display = 'none';
+      localStorage.setItem('bannerClosedTime', new Date().toISOString());
+    });
+  }
+
+  // Manipulador de eventos para o restante do banner
   if (installBanner) {
     installBanner.addEventListener('click', () => {
       if (deferredPrompt) {
+        installBanner.style.display = 'none';
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
@@ -45,14 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
           deferredPrompt = null;
         });
       }
-    });
-  }
-
-  if (closeBannerButton) {
-    closeBannerButton.addEventListener('click', (event) => {
-      event.stopPropagation(); // Impede que o evento se propague para o banner
-      installBanner.style.display = 'none';
-      localStorage.setItem('bannerClosedTime', new Date().toISOString());
     });
   }
 });
