@@ -1,3 +1,13 @@
+function wasBannerRecentlyClosed() {
+  const bannerClosedTime = localStorage.getItem('bannerClosedTime');
+  if (!bannerClosedTime) {
+    return false;
+  }
+
+  const timeElapsed = new Date().getTime() - new Date(bannerClosedTime).getTime();
+  return timeElapsed < 3 * 24 * 60 * 60 * 1000; // 3 dias em milissegundos
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const installBanner = document.getElementById('install_banner');
   const closeBannerButton = document.getElementById('close_banner');
