@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (wasBannerRecentlyClosed()) {
     if (installBanner) {
       installBanner.style.display = 'none';
+      closeBannerButton.style.display = 'none';
     }
     return;
   }
@@ -33,12 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
     deferredPrompt = e;
     if (installBanner && window.innerWidth <= 500) {
       installBanner.style.display = 'flex';
+      closeBannerButton.style.display = 'flex';
     }
   });
 
-  // Manipulador de eventos para o botão 'X'
   if (closeBannerButton) {
     closeBannerButton.addEventListener('click', (event) => {
+      console.log('tests')
       event.stopPropagation();
       installBanner.style.display = 'none';
       closeBannerButton.style.display = 'none';
@@ -46,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Manipulador de eventos para o restante do banner
   if (installBanner) {
     installBanner.addEventListener('click', () => {
       if (deferredPrompt) {

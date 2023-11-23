@@ -1,10 +1,8 @@
-<div class="fixed bottom-0 left-0 right-0 md:hidden">
-  <div id="close_banner" class="text-right">
-    <span class='mr-5 text-4xl bg-black shadow-lg text-white px-10'>&times;</span>
-  </div>
-
-  <div id="install_banner" class="bg-black shadow-lg text-white px-4 py-2 flex items-center justify-center space-x-2 cursor-pointer z-10">
+<div class="fixed bottom-0 left-0 right-0 bg-black shadow shadow-white text-white px-4 py-2 flex items-center justify-center space-x-2 md:hidden cursor-pointer">
+  <div id="install_banner">
     <%= image_tag "logo-op-cdo", alt: "Logo", class: "h-full" %>
     <span>Adicionar APP da Operação na Página Inicial</span>
   </div>
+
+  <button id="close_banner" class="ml-auto leading-none text-4xl">&times;</button>
 </div>
