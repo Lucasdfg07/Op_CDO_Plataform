@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', (e) => {
     if (isRunningAsPWA()) {
+      console.log('Is a PWA')
       return;
     }
 
@@ -39,8 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (closeBannerButton) {
+    console.log('PWA Close button is present')
     closeBannerButton.addEventListener('click', (event) => {
-      console.log('tests')
+      console.log('Closing Banner')
       event.stopPropagation();
       installBanner.style.display = 'none';
       closeBannerButton.style.display = 'none';
@@ -49,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (installBanner) {
+    console.log('PWA Banner is Present')
     installBanner.addEventListener('click', () => {
+      console.log('Installing PWA')
       if (deferredPrompt) {
         installBanner.style.display = 'none';
         closeBannerButton.style.display = 'none';
