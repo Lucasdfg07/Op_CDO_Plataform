@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Manipulador de eventos para o botão 'X'
   if (closeBannerButton) {
     closeBannerButton.addEventListener('click', (event) => {
-      event.stopPropagation(); // Impede que o evento se propague para o banner
+      event.stopPropagation();
       installBanner.style.display = 'none';
       localStorage.setItem('bannerClosedTime', new Date().toISOString());
     });
