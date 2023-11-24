@@ -1,5 +1,12 @@
 pt:
   user:
+    actions:
+      edit: 'Editar Perfil'
+    fields:
+      name: 'Nome'
+      email: 'Email'
+      password: 'Senha'
+      password_confirmation: 'Confirme sua senha'
     session:
       home: 'Página Inicial'
       admin_panel: 'Painel Administrativo'

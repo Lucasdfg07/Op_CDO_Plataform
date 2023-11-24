@@ -13,6 +13,8 @@
           <%= link_to t("user.session.admin_panel"), admin_home_index_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> | 
         <% end %>
 
+        <%= link_to t("user.actions.edit"), edit_user_registration_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> | 
+
         <%= link_to t("user.session.quit"), destroy_user_session_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %>
     </div>
   </div>
