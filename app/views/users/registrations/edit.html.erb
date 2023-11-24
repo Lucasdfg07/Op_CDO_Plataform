@@ -17,7 +17,7 @@
         </div>
 
         <div class="field mt-5">
-          <%= f.label t('user.fields.password') %> <i>(leave blank if you don't want to change it)</i><br />
+          <%= f.label t('user.fields.password') %> <i>(<%= t('t.user.fields.blank') %>)</i><br />
           <%= f.password_field :password, autocomplete: "new-password" %>
         </div>
 

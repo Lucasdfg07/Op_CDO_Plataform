@@ -5,3 +5,12 @@
 input[type=text], input[type=email], input[type=password], select, textarea {
   color: black!important;
 }
+::-webkit-scrollbar{
+  height: 4px;
+  width: 4px;
+  background: rgb(63, 5, 78);
+}
+::-webkit-scrollbar-thumb:horizontal{
+  background: #e6e6e6;
+  border-radius: 10px;
+}
