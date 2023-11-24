@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
+  get '/users/sign_up', to: redirect('/')
+  get '/users/confirmation/new', to: redirect('/')
+  get '/users/confirmation', to: redirect('/')
+
   namespace :admin do
     resources :home, only: [:index]
     resources :lesson_classes, only: [:index, :new, :create, :edit, :update, :destroy]
