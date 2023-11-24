@@ -1,21 +1,40 @@
-<nav class='bg-black/60 shadow-lg shadow-white/30 fixed w-full'>
-  <div class='grid grid-cols-6 items-center'>
-    <div class='col-start-1 col-end-2 flex items-center justify-center'>
-      <%= link_to root_path do %>
-        <%= image_tag 'logo-op-cdo', alt: 'Logo', class: 'object-contain w-32' %>
-      <% end %>
+<nav class='bg-black/60 shadow-lg shadow-white/30 fixed w-full flex items-center justify-between'>
+  <!-- Logo -->
+  <div class='flex items-center justify-center'>
+    <%= link_to root_path do %>
+      <%= image_tag 'logo-op-cdo', alt: 'Logo', class: 'object-contain w-32' %>
+    <% end %>
+  </div>
+
+  <!-- Regular Menu Links (hidden on small screens) -->
+  <div class='text-right md:block hidden'>
+    <%= link_to t("user.session.home"), root_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> |
+
+    <% if current_user.admin? %>
+      <%= link_to t("user.session.admin_panel"), admin_home_index_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> | 
+    <% end %>
+
+    <%= link_to t("user.actions.edit"), edit_user_registration_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> | 
+
+    <%= link_to t("user.session.quit"), destroy_user_session_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %>
+  </div>
+
+  <!-- Burger Icon (visible on small screens) -->
+  <div class="md:hidden flex items-center justify-center cursor-pointer burger-menu">
+    <div class="space-y-2">
+      <span class="block w-8 h-0.5 bg-white"></span>
+      <span class="block w-8 h-0.5 bg-white"></span>
+      <span class="block w-8 h-0.5 bg-white"></span>
     </div>
+  </div>
 
-    <div class='col-end-7 col-span-5 text-right'>
-        <%= link_to t("user.session.home"), root_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> |
-
-        <% if current_user.admin? %>
-          <%= link_to t("user.session.admin_panel"), admin_home_index_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> | 
-        <% end %>
-
-        <%= link_to t("user.actions.edit"), edit_user_registration_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %> | 
-
-        <%= link_to t("user.session.quit"), destroy_user_session_path, class: 'text-lg hover:underline md:mx-10 xs:mx-2' %>
-    </div>
+  <!-- Dropdown Menu (hidden on larger screens) -->
+  <div class="md:hidden absolute right-10 mt-20 p-5 bg-black/60 rounded-lg shadow-lg shadow-white/30 hidden dropdown-menu">
+    <%= link_to t("user.session.home"), root_path, class: 'block text-lg hover:underline mb-2' %>
+    <% if current_user.admin? %>
+      <%= link_to t("user.session.admin_panel"), admin_home_index_path, class: 'block text-lg hover:underline mb-2' %> 
+    <% end %>
+    <%= link_to t("user.actions.edit"), edit_user_registration_path, class: 'block text-lg hover:underline mb-2' %> 
+    <%= link_to t("user.session.quit"), destroy_user_session_path, class: 'block text-lg hover:underline' %>
   </div>
 </nav>
