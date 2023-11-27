@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <% lesson_classes.each do |lesson_class| %>
-        <tr class="bg-white border-b bg-gray-800 border-gray-700">
+        <tr class="border-b bg-gray-800 border-gray-700">
           <td class="px-6 py-4 font-medium whitespace-nowrap text-white">
             <%= lesson_class.id %>
           </td>
@@ -28,18 +28,20 @@
             <%= lesson_class.description %>
           </td>
           <td class="px-6 py-4">
-            <%= link_to edit_admin_lesson_class_path(lesson_class), class: "text-indigo-600 hover:text-indigo-900" do %>
+            <%= link_to edit_admin_lesson_class_path(lesson_class), class: "text-indigo-600 hover:text-indigo-900 flex" do %>
+              <%= t('platform.object.edit') %>
               <%= image_tag 'pen', alt: 'Pen Edit Icon', class: 'w-6' %>
             <% end %>
           </td>
           <td class="px-6 py-4">
             <%= link_to admin_lesson_class_path(lesson_class),
-              class: "text-red-600 hover:text-red-900",
+              class: "text-red-600 hover:text-red-900 flex",
               data: {
                 turbo_method: "delete",
                 turbo_confirm: t('platform.object.delete')
               } do
             %>
+              <%= t('platform.object.destroy') %>
               <%= image_tag 'trash', alt: 'Trash Delete Icon', class: 'w-6' %>
             <% end %>
           </td>

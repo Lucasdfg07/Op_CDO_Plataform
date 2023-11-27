@@ -17,6 +17,8 @@ pt:
   platform:
     object:
       delete: 'Tem Certeza?!'
+      edit: 'Editar'
+      destroy: 'Excluir'
     home:
       subtitle: 'Plataforma Operação Código de Ouro'
       title: 'LEVANDO SUA CARREIRA ATÉ O MERCADO INTERNACIONAL'

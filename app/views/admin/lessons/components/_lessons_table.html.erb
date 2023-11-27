@@ -1,5 +1,5 @@
 <% lesson_class.lessons.each do |lesson| %>
-  <tr class="bg-white border-b bg-slate-200 border-gray-700">
+  <tr class="border-b bg-slate-200 border-gray-700">
     <td class="px-6 py-4 font-medium whitespace-nowrap text-black">
       <%= lesson.id %>
     </td>
@@ -7,18 +7,20 @@
       <%= link_to lesson.title, lesson_class_lesson_path(lesson.lesson_class.id, lesson.id), class: 'hover:blue hover:underline' %>
     </td>
     <td class="px-6 py-4">
-      <%= link_to edit_admin_lesson_path(lesson), class: "text-indigo-600 hover:text-indigo-900" do %>
+      <%= link_to edit_admin_lesson_path(lesson), class: "text-indigo-600 hover:text-indigo-900 flex" do %>
+        <%= t('platform.object.edit') %>
         <%= image_tag 'pen', alt: 'Pen Edit Icon', class: 'w-6' %>
       <% end %>
     </td>
     <td class="px-6 py-4">
       <%= link_to admin_lesson_path(lesson),
-        class: "text-red-600 hover:text-red-900",
+        class: "text-red-600 hover:text-red-900 flex",
         data: {
           turbo_method: "delete",
           turbo_confirm: t('platform.object.delete')
         } do
       %>
+        <%= t('platform.object.destroy') %>
         <%= image_tag 'trash', alt: 'Trash Delete Icon', class: 'w-6' %>
       <% end %>
     </td>

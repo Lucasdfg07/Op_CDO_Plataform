@@ -6,7 +6,7 @@
 
     <div class='mt-4'>
       <%= t('platform.lesson.fields.category.title') %> <br />
-      <%= form.collection_select :category_id, Category.all, :id, :title, { include_blank: t('blank.content') }, { required: true, value: lesson_class.category_id } %>
+      <%= form.collection_select :category_id, Category.all.order(id: :asc), :id, :title, { include_blank: t('blank.content') }, { required: true, value: lesson_class.category_id } %>
     </div>
 
     <div class='mt-4'>
