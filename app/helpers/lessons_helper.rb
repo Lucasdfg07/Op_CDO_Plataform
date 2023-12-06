@@ -24,6 +24,6 @@ module LessonsHelper
   end
 
   def lessons_of_parent_lesson_class
-    @lesson.lesson_class.lessons
+    lessons_of(@lesson.lesson_class)
   end
 end
